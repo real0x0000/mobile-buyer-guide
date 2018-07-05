@@ -1,5 +1,10 @@
 PODS:
   - Alamofire (4.7.2)
+  - Realm (3.7.2):
+    - Realm/Headers (= 3.7.2)
+  - Realm/Headers (3.7.2)
+  - RealmSwift (3.7.2):
+    - Realm (= 3.7.2)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
@@ -10,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.7.2)
+  - RealmSwift (= 3.7.2)
   - RxCocoa (= 4.2.0)
   - RxSwift (= 4.2.0)
   - SDWebImage (= 4.4.1)
@@ -18,6 +24,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxSwift
     - SDWebImage
@@ -25,11 +33,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Realm: dd18c3014e8d90df300b83c6da740067436089c5
+  RealmSwift: 79917cae59a0c43ef8118b233a5978891dd50b4a
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SDWebImage: 47e9b5b925cbce75946c23f0c42dd19464189af4
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 2f222ac7caf8d79a2fb46c3911e26de9e9b7c7d9
+PODFILE CHECKSUM: 1b3475afa9c2ff5cce2576cc7dacfd8069639c52
 
 COCOAPODS: 1.5.0

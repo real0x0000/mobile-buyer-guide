@@ -15,6 +15,7 @@
 		1478362120EE2D84000FF63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1478361F20EE2D84000FF63D /* LaunchScreen.storyboard */; };
 		1478362C20EE2D84000FF63D /* Mobile_buyer_guideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478362B20EE2D84000FF63D /* Mobile_buyer_guideTests.swift */; };
 		1478363720EE2D84000FF63D /* Mobile_buyer_guideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478363620EE2D84000FF63D /* Mobile_buyer_guideUITests.swift */; };
+		EBE7246EE31EC93AF1449EB6 /* Pods_Mobile_buyer_guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8D1477B8FABD6AD4481B6E /* Pods_Mobile_buyer_guide.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		1478363220EE2D84000FF63D /* Mobile-buyer-guideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobile-buyer-guideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1478363620EE2D84000FF63D /* Mobile_buyer_guideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobile_buyer_guideUITests.swift; sourceTree = "<group>"; };
 		1478363820EE2D84000FF63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B8D1477B8FABD6AD4481B6E /* Pods_Mobile_buyer_guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mobile_buyer_guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		546A1D35ADBA98321C14FAF3 /* Pods-Mobile-buyer-guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-buyer-guide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile-buyer-guide/Pods-Mobile-buyer-guide.release.xcconfig"; sourceTree = "<group>"; };
+		87E51E21C23322BCB95F0F0C /* Pods-Mobile-buyer-guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mobile-buyer-guide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mobile-buyer-guide/Pods-Mobile-buyer-guide.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE7246EE31EC93AF1449EB6 /* Pods_Mobile_buyer_guide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				1478362A20EE2D84000FF63D /* Mobile-buyer-guideTests */,
 				1478363520EE2D84000FF63D /* Mobile-buyer-guideUITests */,
 				1478361120EE2D83000FF63D /* Products */,
+				80E688DFA51B5CB6694D74BF /* Pods */,
+				AF6A3A514A0BA474143B0CFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,23 @@
 			path = "Mobile-buyer-guideUITests";
 			sourceTree = "<group>";
 		};
+		80E688DFA51B5CB6694D74BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87E51E21C23322BCB95F0F0C /* Pods-Mobile-buyer-guide.debug.xcconfig */,
+				546A1D35ADBA98321C14FAF3 /* Pods-Mobile-buyer-guide.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF6A3A514A0BA474143B0CFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B8D1477B8FABD6AD4481B6E /* Pods_Mobile_buyer_guide.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1478363B20EE2D84000FF63D /* Build configuration list for PBXNativeTarget "Mobile-buyer-guide" */;
 			buildPhases = (
+				5B3AF302C2C4EC16E94B6017 /* [CP] Check Pods Manifest.lock */,
 				1478360C20EE2D83000FF63D /* Sources */,
 				1478360D20EE2D83000FF63D /* Frameworks */,
 				1478360E20EE2D83000FF63D /* Resources */,
+				8766B99BCE5B7F794BB26CBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +279,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B3AF302C2C4EC16E94B6017 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mobile-buyer-guide-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8766B99BCE5B7F794BB26CBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Mobile-buyer-guide/Pods-Mobile-buyer-guide-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mobile-buyer-guide/Pods-Mobile-buyer-guide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1478360C20EE2D83000FF63D /* Sources */ = {
@@ -432,15 +505,13 @@
 		};
 		1478363C20EE2D84000FF63D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E51E21C23322BCB95F0F0C /* Pods-Mobile-buyer-guide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guide/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -450,15 +521,13 @@
 		};
 		1478363D20EE2D84000FF63D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546A1D35ADBA98321C14FAF3 /* Pods-Mobile-buyer-guide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guide/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -474,11 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -495,11 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -515,11 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -535,11 +592,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -4,11 +4,12 @@ use_frameworks!
 
 def shared_pods
     pod 'Alamofire', '4.7.2'
-    pod 'RealmSwift', '3.7.2'
+    pod 'RealmSwift', '3.7.4'
     pod 'RxCocoa', '4.2.0'
     pod 'RxSwift', '4.2.0'
     pod 'SDWebImage', '4.4.1'
     pod 'SwiftyJSON', '4.1.0'
+    pod 'XLPagerTabStrip', '8.0.1'
 end
 
 target 'Mobile-buyer-guide' do

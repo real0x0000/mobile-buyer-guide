@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14300C8220EF505900D75546 /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C8120EF505900D75546 /* MobileListViewController.swift */; };
+		14300C8420EF509500D75546 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C8320EF509500D75546 /* FavoriteListViewController.swift */; };
+		143BE20720EE5E2100D0A8FD /* MobilePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20620EE5E2100D0A8FD /* MobilePhone.swift */; };
+		143BE20A20EE610900D0A8FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20920EE610900D0A8FD /* MainViewController.swift */; };
+		143BE20D20EE612D00D0A8FD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20C20EE612D00D0A8FD /* MainViewModel.swift */; };
+		143BE21420EE623300D0A8FD /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE21320EE623300D0A8FD /* ConnectionController.swift */; };
+		143BE21820EE65C300D0A8FD /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE21720EE65C300D0A8FD /* Properties.swift */; };
 		1478361420EE2D83000FF63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478361320EE2D83000FF63D /* AppDelegate.swift */; };
-		1478361620EE2D83000FF63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478361520EE2D83000FF63D /* ViewController.swift */; };
 		1478361920EE2D83000FF63D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1478361720EE2D83000FF63D /* Main.storyboard */; };
 		1478361C20EE2D83000FF63D /* Mobile_buyer_guide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1478361A20EE2D83000FF63D /* Mobile_buyer_guide.xcdatamodeld */; };
 		1478361E20EE2D84000FF63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1478361D20EE2D84000FF63D /* Assets.xcassets */; };
@@ -36,9 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14300C8120EF505900D75546 /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
+		14300C8320EF509500D75546 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
+		143BE20620EE5E2100D0A8FD /* MobilePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilePhone.swift; sourceTree = "<group>"; };
+		143BE20920EE610900D0A8FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		143BE20C20EE612D00D0A8FD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		143BE21320EE623300D0A8FD /* ConnectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
+		143BE21720EE65C300D0A8FD /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		1478361020EE2D83000FF63D /* Mobile-buyer-guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile-buyer-guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1478361320EE2D83000FF63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1478361520EE2D83000FF63D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1478361820EE2D83000FF63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1478361B20EE2D83000FF63D /* Mobile_buyer_guide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mobile_buyer_guide.xcdatamodel; sourceTree = "<group>"; };
 		1478361D20EE2D84000FF63D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +93,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143BE20520EE5E0500D0A8FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		143BE20820EE60EA00D0A8FD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				143BE20920EE610900D0A8FD /* MainViewController.swift */,
+				14300C8120EF505900D75546 /* MobileListViewController.swift */,
+				14300C8320EF509500D75546 /* FavoriteListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		143BE20B20EE612000D0A8FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				143BE20C20EE612D00D0A8FD /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		143BE21220EE622600D0A8FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				143BE21320EE623300D0A8FD /* ConnectionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1478360720EE2D83000FF63D = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +151,13 @@
 		1478361220EE2D83000FF63D /* Mobile-buyer-guide */ = {
 			isa = PBXGroup;
 			children = (
+				14E97A0E20EF4DC2006222BA /* Data Object */,
+				143BE21220EE622600D0A8FD /* Controller */,
+				143BE20520EE5E0500D0A8FD /* Model */,
+				143BE20820EE60EA00D0A8FD /* ViewController */,
+				143BE20B20EE612000D0A8FD /* ViewModel */,
 				1478361320EE2D83000FF63D /* AppDelegate.swift */,
-				1478361520EE2D83000FF63D /* ViewController.swift */,
+				143BE21720EE65C300D0A8FD /* Properties.swift */,
 				1478361720EE2D83000FF63D /* Main.storyboard */,
 				1478361D20EE2D84000FF63D /* Assets.xcassets */,
 				1478361F20EE2D84000FF63D /* LaunchScreen.storyboard */,
@@ -133,6 +183,14 @@
 				1478363820EE2D84000FF63D /* Info.plist */,
 			);
 			path = "Mobile-buyer-guideUITests";
+			sourceTree = "<group>";
+		};
+		14E97A0E20EF4DC2006222BA /* Data Object */ = {
+			isa = PBXGroup;
+			children = (
+				143BE20620EE5E2100D0A8FD /* MobilePhone.swift */,
+			);
+			path = "Data Object";
 			sourceTree = "<group>";
 		};
 		80E688DFA51B5CB6694D74BF /* Pods */ = {
@@ -313,6 +371,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -323,6 +382,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,9 +396,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				143BE21820EE65C300D0A8FD /* Properties.swift in Sources */,
 				1478361C20EE2D83000FF63D /* Mobile_buyer_guide.xcdatamodeld in Sources */,
-				1478361620EE2D83000FF63D /* ViewController.swift in Sources */,
+				14300C8420EF509500D75546 /* FavoriteListViewController.swift in Sources */,
+				143BE20720EE5E2100D0A8FD /* MobilePhone.swift in Sources */,
 				1478361420EE2D83000FF63D /* AppDelegate.swift in Sources */,
+				14300C8220EF505900D75546 /* MobileListViewController.swift in Sources */,
+				143BE21420EE623300D0A8FD /* ConnectionController.swift in Sources */,
+				143BE20A20EE610900D0A8FD /* MainViewController.swift in Sources */,
+				143BE20D20EE612D00D0A8FD /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +581,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guide/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,7 +600,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guide/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -547,7 +619,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -564,7 +640,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -580,7 +660,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -596,7 +680,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NR4FW2832B;
 				INFOPLIST_FILE = "Mobile-buyer-guideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.real0x0000.mobile-buyer-guide.Mobile-buyer-guideUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

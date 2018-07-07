@@ -13,7 +13,6 @@ import XLPagerTabStrip
 class MobileListViewController: UITableViewController {
     
     let vm = MobileListViewModel()
-    fileprivate let mvm = MainViewModel()
     fileprivate let disposeBag = DisposeBag()
     var itemInfo: IndicatorInfo = "View"
     fileprivate var mobileList: [MobilePhone] = []
@@ -58,6 +57,10 @@ class MobileListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MOBILE_DETAIL") as? MobileDetailViewController else { return }
+        let mobile = mobileList[indexPath.row]
+        vc.mobile = mobile
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc fileprivate func favorite(_ sender: UIButton) {

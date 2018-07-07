@@ -10,7 +10,9 @@ import RxSwift
 
 class MobileListViewModel {
     
+    fileprivate let mainVM = MainViewModel()
     let rx_mobileList: BehaviorSubject<[MobilePhone]> = BehaviorSubject(value: [])
+//    let rx_sorting: BehaviorSubject<
     
     func getMobileList() {
         self.rx_mobileList.onNext(MobilePhone.getAll())

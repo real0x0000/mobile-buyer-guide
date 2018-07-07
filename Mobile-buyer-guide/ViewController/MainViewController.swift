@@ -18,8 +18,28 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     fileprivate let mobileVC = MobileListViewController(itemInfo: "All")
     fileprivate let favoriteVC = FavoriteListViewController(itemInfo: "Favorite")
     
+    @IBAction func sortList(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Sort", message: nil, preferredStyle: .alert)
+        let lowPriceAction = UIAlertAction(title: "Price low to high", style: .default, handler: { action in
+            
+        })
+        let highPriceAction = UIAlertAction(title: "Price high to low", style: .default, handler: { action in
+            
+        })
+        let ratingAction = UIAlertAction(title: "Rating", style: .default, handler: { action in
+            
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(lowPriceAction)
+        alertController.addAction(highPriceAction)
+        alertController.addAction(ratingAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         settings.style.buttonBarBackgroundColor = UIColor.white
         settings.style.buttonBarItemBackgroundColor = UIColor.white
         settings.style.selectedBarBackgroundColor = UIColor.white

@@ -13,7 +13,6 @@ import XLPagerTabStrip
 class FavoriteListViewController: UITableViewController {
     
     let vm = FavoriteListViewModel()
-    fileprivate let mvm = MainViewModel()
     fileprivate let disposeBag = DisposeBag()
     var itemInfo: IndicatorInfo = "View"
     fileprivate var favoriteList: [MobilePhone] = []
@@ -57,6 +56,10 @@ class FavoriteListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MOBILE_DETAIL") as? MobileDetailViewController else { return }
+        let mobile = favoriteList[indexPath.row]
+        vc.mobile = mobile
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

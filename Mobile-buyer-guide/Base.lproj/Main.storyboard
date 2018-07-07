@@ -17,7 +17,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vng-xA-4M3" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="90h-e2-knP"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yYD-AC-hYU">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8T-be-juk">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H8T-be-juk" secondAttribute="bottom" id="B7e-2z-52L"/>
+                            <constraint firstItem="vng-xA-4M3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GWz-l7-l7I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vng-xA-4M3" secondAttribute="trailing" id="O9G-RP-YGn"/>
+                            <constraint firstItem="H8T-be-juk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PhR-cU-e47"/>
+                            <constraint firstItem="H8T-be-juk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WMy-wb-vfZ"/>
+                            <constraint firstItem="H8T-be-juk" firstAttribute="top" secondItem="vng-xA-4M3" secondAttribute="bottom" id="izu-sj-UHB"/>
+                            <constraint firstItem="vng-xA-4M3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m8D-ja-7dm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="raf-aF-zln">
@@ -29,25 +58,29 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonBarView" destination="vng-xA-4M3" id="8gJ-Ri-oXC"/>
+                        <outlet property="containerView" destination="H8T-be-juk" id="8Xw-qQ-DbE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="143"/>
+            <point key="canvasLocation" x="845.60000000000002" y="142.57871064467767"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Hbr-lT-wIt">
+        <scene sceneID="t69-97-AbW">
             <objects>
-                <viewController id="npK-Gd-fRa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xyi-ae-KcO">
+                <viewController id="4q9-gF-8Vo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JuJ-3z-D7S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ttc-L5-p6x"/>
+                        <viewLayoutGuide key="safeArea" id="dJ3-Lm-V8p"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ff3-2m-plu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wlv-Qj-3AY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="143"/>
+            <point key="canvasLocation" x="1548" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SjH-yq-89N">

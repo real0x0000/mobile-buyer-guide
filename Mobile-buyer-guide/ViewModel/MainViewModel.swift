@@ -16,12 +16,15 @@ class MainViewModel {
         let path = "https://scb-test-mobile.herokuapp.com/api/mobiles"
         ConnectionController.share.makeRequest(path, onCompletion: { (result) in
             if let json = result {
-                let mobileList = json.map { (_, js) in MobilePhone.parseJSON(js) }
-                self.rx_mobileList.onNext(mobileList)
+                json.forEach { (_, js) in
+                    MobilePhone.saveJSON(js)
+                }
+                self.rx_mobileList.onNext(MobilePhone.getAll())
             }
         }, onError: { (error) in
             print(error)
         })
     }
+    
     
 }

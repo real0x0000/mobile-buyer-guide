@@ -9,31 +9,61 @@
 import RealmSwift
 import SwiftyJSON
 
-struct MobilePhone {
+class MobilePhone: Object {
     
-    var thumbImageUrl: String?
-    var name: String
-    var rating: Double
-    var id: Int
-    var price: Double
-    var desc: String
-    var brand: String
+    @objc dynamic var thumbImageUrl: String? = nil
+    @objc dynamic var name: String = ""
+    @objc dynamic var rating: Double = 0.0
+    @objc dynamic var id: Int = 0
+    @objc dynamic var price: Double = 0.0
+    @objc dynamic var desc: String = ""
+    @objc dynamic var brand: String = ""
+    @objc dynamic var isFavorite: Bool = false
     
-}
-
-extension MobilePhone {
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     
-    static func parseJSON(_ json: JSON) -> MobilePhone {
-        let thumbImageUrl = json["thumbImageUrl"].string
-        let name = json["name"].stringValue
-        let rating = json["rating"].doubleValue
+    static func saveJSON(_ json: JSON) {
+        let realm = try! Realm()
         let id = json["id"].intValue
-        let price = json["price"].doubleValue
-        let desc = json["description"].stringValue
-        let brand = json["brand"].stringValue
-        return MobilePhone(thumbImageUrl: thumbImageUrl, name: name, rating: rating, id: id, price: price, desc: desc, brand: brand)
+        let mobile = MobilePhone()
+        mobile.thumbImageUrl = json["thumbImageURL"].string
+        mobile.name = json["name"].stringValue
+        mobile.rating = json["rating"].doubleValue
+        mobile.id = id
+        mobile.price = json["price"].doubleValue
+        mobile.desc = json["description"].stringValue
+        mobile.brand = json["brand"].stringValue
+        if let mb = realm.object(ofType: MobilePhone.self, forPrimaryKey: id) {
+            mobile.isFavorite = mb.isFavorite
+        }
+        try! realm.write {
+            realm.add(mobile, update: true)
+        }
+    }
+
+    static func getAll() -> [MobilePhone] {
+        let realm = try! Realm()
+        let list = realm.objects(MobilePhone.self)
+        return Array(list)
+    }
+    
+    static func getFavoriteList() -> [MobilePhone] {
+        return getAll().filter { $0.isFavorite }
+    }
+    
+    static func updateFavorite(_ id: Int, isFavorite: Bool) {
+        let realm = try! Realm()
+        if let mobile = realm.object(ofType: MobilePhone.self, forPrimaryKey: id) {
+            try! realm.write {
+                mobile.isFavorite = isFavorite
+            }
+        }
     }
     
 }
+
+
 
 

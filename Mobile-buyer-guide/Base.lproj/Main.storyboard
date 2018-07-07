@@ -176,6 +176,7 @@
                     </view>
                     <connections>
                         <outlet property="descLabel" destination="ZEx-Qo-TTZ" id="Tfw-f3-QAz"/>
+                        <outlet property="imageCollectionView" destination="4cv-YT-7xS" id="JGT-lR-3Gf"/>
                         <outlet property="priceLabel" destination="Qqg-g3-zfS" id="Abv-Oh-uIh"/>
                         <outlet property="ratingLabel" destination="VC5-av-2sn" id="hYc-v2-ES2"/>
                     </connections>

@@ -13,7 +13,7 @@ import XLPagerTabStrip
 
 class MainViewController: ButtonBarPagerTabStripViewController {
     
-    let vm = MainViewModel()
+//    let vm = MainViewModel()
     fileprivate let disposeBag = DisposeBag()
     fileprivate let mobileVC = MobileListViewController(itemInfo: "All")
     fileprivate let favoriteVC = FavoriteListViewController(itemInfo: "Favorite")
@@ -21,13 +21,14 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     @IBAction func sortList(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Sort", message: nil, preferredStyle: .alert)
         let lowPriceAction = UIAlertAction(title: "Price low to high", style: .default, handler: { action in
-            
+//            MainViewModel.share.rx_sortType.onNext(SortType.lowPrice)
+            MainViewModel.share.rx_sortType.onNext(SortType.lowPrice)
         })
         let highPriceAction = UIAlertAction(title: "Price high to low", style: .default, handler: { action in
-            
+            MainViewModel.share.rx_sortType.onNext(SortType.highPrice)
         })
         let ratingAction = UIAlertAction(title: "Rating", style: .default, handler: { action in
-            
+            MainViewModel.share.rx_sortType.onNext(SortType.rating)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(lowPriceAction)
@@ -54,7 +55,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = UIColor.lightGray
             newCell?.label.textColor = UIColor.black
         }
-        vm.getMobileList()
+        MainViewModel.share.getMobileList()
     }
     
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

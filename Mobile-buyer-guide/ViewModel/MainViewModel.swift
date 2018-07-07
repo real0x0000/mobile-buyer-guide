@@ -10,7 +10,9 @@ import RxSwift
 
 class MainViewModel {
     
-    let rx_mobileList: BehaviorSubject<[MobilePhone]> = BehaviorSubject(value: [])
+    static let share = MainViewModel()
+    let rx_sortType: BehaviorSubject<SortType> = BehaviorSubject(value: SortType.none)
+    let rx_isUpdateList: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     
     func getMobileList() {
         let path = "https://scb-test-mobile.herokuapp.com/api/mobiles"
@@ -19,12 +21,27 @@ class MainViewModel {
                 json.forEach { (_, js) in
                     MobilePhone.saveJSON(js)
                 }
-                self.rx_mobileList.onNext(MobilePhone.getAll())
+                self.rx_isUpdateList.onNext(true)
             }
         }, onError: { (error) in
             print(error)
         })
     }
     
+    func sortMobileList(_ list: [MobilePhone]) -> [MobilePhone] {
+        var sortList: [MobilePhone] = []
+        let sortType = try! rx_sortType.value()
+        switch sortType {
+        case .lowPrice:
+            sortList = list.sorted(by: { $0.price < $1.price })
+        case .highPrice:
+            sortList = list.sorted(by: { $0.price > $1.price})
+        case .rating:
+            sortList = list.sorted(by: { $0.rating > $1.rating})
+        default:
+            sortList = list
+        }
+        return sortList
+    }
     
 }

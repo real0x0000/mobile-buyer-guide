@@ -58,7 +58,7 @@ class FavoriteListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MOBILE_DETAIL") as? MobileDetailViewController else { return }
         let mobile = favoriteList[indexPath.row]
-        vc.mobile = mobile
+        vc.vm.applyMobile(mobile)
         navigationController?.pushViewController(vc, animated: true)
     }
     

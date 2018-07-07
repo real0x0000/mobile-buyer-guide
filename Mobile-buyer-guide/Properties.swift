@@ -6,6 +6,13 @@
 //  Copyright © 2561 real0x0000. All rights reserved.
 //
 
+enum SortType {
+    case none
+    case lowPrice
+    case highPrice
+    case rating
+}
+
 class Properties {
     
     class Service {
@@ -15,5 +22,6 @@ class Properties {
     class Message {
         static let MESSAGE_ERROR_INTERNET = "พบข้อผิดพลาดในการเชื่อมต่ออินเตอร์เน็ต"
     }
+    
     
 }

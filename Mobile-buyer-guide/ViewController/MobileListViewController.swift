@@ -59,7 +59,7 @@ class MobileListViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MOBILE_DETAIL") as? MobileDetailViewController else { return }
         let mobile = mobileList[indexPath.row]
-        vc.mobile = mobile
+        vc.vm.applyMobile(mobile)
         navigationController?.pushViewController(vc, animated: true)
     }
     

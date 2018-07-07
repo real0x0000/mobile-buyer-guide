@@ -14,6 +14,8 @@
 		14300C8E20EF6B9F00D75546 /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C8D20EF6B9F00D75546 /* MobileListViewModel.swift */; };
 		14300C9020EF753500D75546 /* FavoriteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C8F20EF753500D75546 /* FavoriteListViewModel.swift */; };
 		14300C9420F0C6D100D75546 /* MobileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9320F0C6D100D75546 /* MobileDetailViewController.swift */; };
+		14300C9620F0CC2100D75546 /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9520F0CC2100D75546 /* MobileDetailViewModel.swift */; };
+		14300C9820F1027800D75546 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9720F1027800D75546 /* AlertController.swift */; };
 		143BE20720EE5E2100D0A8FD /* MobilePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20620EE5E2100D0A8FD /* MobilePhone.swift */; };
 		143BE20A20EE610900D0A8FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20920EE610900D0A8FD /* MainViewController.swift */; };
 		143BE20D20EE612D00D0A8FD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20C20EE612D00D0A8FD /* MainViewModel.swift */; };
@@ -54,6 +56,8 @@
 		14300C8D20EF6B9F00D75546 /* MobileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewModel.swift; sourceTree = "<group>"; };
 		14300C8F20EF753500D75546 /* FavoriteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewModel.swift; sourceTree = "<group>"; };
 		14300C9320F0C6D100D75546 /* MobileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewController.swift; sourceTree = "<group>"; };
+		14300C9520F0CC2100D75546 /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
+		14300C9720F1027800D75546 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		143BE20620EE5E2100D0A8FD /* MobilePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilePhone.swift; sourceTree = "<group>"; };
 		143BE20920EE610900D0A8FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		143BE20C20EE612D00D0A8FD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				143BE20C20EE612D00D0A8FD /* MainViewModel.swift */,
 				14300C8D20EF6B9F00D75546 /* MobileListViewModel.swift */,
 				14300C8F20EF753500D75546 /* FavoriteListViewModel.swift */,
+				14300C9520F0CC2100D75546 /* MobileDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				143BE21320EE623300D0A8FD /* ConnectionController.swift */,
+				14300C9720F1027800D75546 /* AlertController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -413,12 +419,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				143BE21820EE65C300D0A8FD /* Properties.swift in Sources */,
+				14300C9820F1027800D75546 /* AlertController.swift in Sources */,
 				1478361C20EE2D83000FF63D /* Mobile_buyer_guide.xcdatamodeld in Sources */,
 				14300C8E20EF6B9F00D75546 /* MobileListViewModel.swift in Sources */,
 				14300C9420F0C6D100D75546 /* MobileDetailViewController.swift in Sources */,
 				14300C8420EF509500D75546 /* FavoriteListViewController.swift in Sources */,
 				14300C8B20EF643100D75546 /* MobileCell.swift in Sources */,
 				143BE20720EE5E2100D0A8FD /* MobilePhone.swift in Sources */,
+				14300C9620F0CC2100D75546 /* MobileDetailViewModel.swift in Sources */,
 				14300C9020EF753500D75546 /* FavoriteListViewModel.swift in Sources */,
 				1478361420EE2D83000FF63D /* AppDelegate.swift in Sources */,
 				14300C8220EF505900D75546 /* MobileListViewController.swift in Sources */,

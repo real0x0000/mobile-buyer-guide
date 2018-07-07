@@ -16,6 +16,7 @@
 		14300C9420F0C6D100D75546 /* MobileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9320F0C6D100D75546 /* MobileDetailViewController.swift */; };
 		14300C9620F0CC2100D75546 /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9520F0CC2100D75546 /* MobileDetailViewModel.swift */; };
 		14300C9820F1027800D75546 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9720F1027800D75546 /* AlertController.swift */; };
+		14300C9A20F11B2700D75546 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14300C9920F11B2700D75546 /* Extension.swift */; };
 		143BE20720EE5E2100D0A8FD /* MobilePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20620EE5E2100D0A8FD /* MobilePhone.swift */; };
 		143BE20A20EE610900D0A8FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20920EE610900D0A8FD /* MainViewController.swift */; };
 		143BE20D20EE612D00D0A8FD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143BE20C20EE612D00D0A8FD /* MainViewModel.swift */; };
@@ -58,6 +59,7 @@
 		14300C9320F0C6D100D75546 /* MobileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewController.swift; sourceTree = "<group>"; };
 		14300C9520F0CC2100D75546 /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
 		14300C9720F1027800D75546 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		14300C9920F11B2700D75546 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		143BE20620EE5E2100D0A8FD /* MobilePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilePhone.swift; sourceTree = "<group>"; };
 		143BE20920EE610900D0A8FD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		143BE20C20EE612D00D0A8FD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				1478362220EE2D84000FF63D /* Info.plist */,
 				1478361A20EE2D83000FF63D /* Mobile_buyer_guide.xcdatamodeld */,
 				14300C8720EF5CF600D75546 /* MobileCell.xib */,
+				14300C9920F11B2700D75546 /* Extension.swift */,
 			);
 			path = "Mobile-buyer-guide";
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				14300C9420F0C6D100D75546 /* MobileDetailViewController.swift in Sources */,
 				14300C8420EF509500D75546 /* FavoriteListViewController.swift in Sources */,
 				14300C8B20EF643100D75546 /* MobileCell.swift in Sources */,
+				14300C9A20F11B2700D75546 /* Extension.swift in Sources */,
 				143BE20720EE5E2100D0A8FD /* MobilePhone.swift in Sources */,
 				14300C9620F0CC2100D75546 /* MobileDetailViewModel.swift in Sources */,
 				14300C9020EF753500D75546 /* FavoriteListViewModel.swift in Sources */,

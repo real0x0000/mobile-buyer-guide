@@ -13,7 +13,6 @@ import XLPagerTabStrip
 
 class MainViewController: ButtonBarPagerTabStripViewController {
     
-//    let vm = MainViewModel()
     fileprivate let disposeBag = DisposeBag()
     fileprivate let mobileVC = MobileListViewController(itemInfo: "All")
     fileprivate let favoriteVC = FavoriteListViewController(itemInfo: "Favorite")
@@ -21,7 +20,6 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     @IBAction func sortList(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Sort", message: nil, preferredStyle: .alert)
         let lowPriceAction = UIAlertAction(title: "Price low to high", style: .default, handler: { action in
-//            MainViewModel.share.rx_sortType.onNext(SortType.lowPrice)
             MainViewModel.share.rx_sortType.onNext(SortType.lowPrice)
         })
         let highPriceAction = UIAlertAction(title: "Price high to low", style: .default, handler: { action in

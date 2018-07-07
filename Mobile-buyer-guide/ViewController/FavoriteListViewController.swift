@@ -28,6 +28,7 @@ class FavoriteListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(FavoriteListViewController.updateList(_:)), name: .addFavorite, object: nil)
         tableView.register(UINib(nibName: "MobileCell", bundle: Bundle.main), forCellReuseIdentifier: "MobileCell")
         vm.getFavoriteList()
         vm.rx_favoriteList
@@ -36,6 +37,10 @@ class FavoriteListViewController: UITableViewController {
                 self.favoriteList = $0
                 self.tableView.reloadData()
             }).disposed(by: disposeBag)
+    }
+    
+    @objc fileprivate func updateList(_ notification: Notification) {
+        vm.getFavoriteList()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,6 +87,7 @@ class FavoriteListViewController: UITableViewController {
             self.favoriteList.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.endUpdates()
+            NotificationCenter.default.post(name: .removeFavorite, object: nil)
         })
         alertController.addAction(cancelAction)
         alertController.addAction(deleteAction)

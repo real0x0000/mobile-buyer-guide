@@ -17,7 +17,7 @@ class FavoriteListViewModel {
         MainViewModel.share.rx_sortType
             .filter { $0 != SortType.none }
             .subscribe(onNext: { [unowned self] _ in
-               self.updateList()
+               self.getFavoriteList()
             }).disposed(by: disposeBag)
         MainViewModel.share.rx_isUpdateList
             .filter { $0 }
@@ -26,11 +26,11 @@ class FavoriteListViewModel {
             }).disposed(by: disposeBag)
     }
     
-    func updateList() {
-        if let list = try? rx_favoriteList.value(), list.count != 0 {
-            self.rx_favoriteList.onNext(MainViewModel.share.sortMobileList(list))
-        }
-    }
+//    func updateList() {
+//        if let list = try? rx_favoriteList.value(), list.count != 0 {
+//            self.rx_favoriteList.onNext(MainViewModel.share.sortMobileList(list))
+//        }
+//    }
     
     func getFavoriteList() {
         let list = MainViewModel.share.sortMobileList(MobilePhone.getFavoriteList())

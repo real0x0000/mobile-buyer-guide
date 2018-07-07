@@ -28,6 +28,7 @@ class MobileListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(MobileListViewController.updateList(_:)), name: .removeFavorite, object: nil)
         tableView.register(UINib(nibName: "MobileCell", bundle: Bundle.main), forCellReuseIdentifier: "MobileCell")
         vm.getMobileList()
         vm.rx_mobileList
@@ -36,6 +37,10 @@ class MobileListViewController: UITableViewController {
                 self.mobileList = $0
                 self.tableView.reloadData()
             }).disposed(by: disposeBag)
+    }
+    
+    @objc fileprivate func updateList(_ notification: Notification) {
+        vm.getMobileList()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,11 +72,10 @@ class MobileListViewController: UITableViewController {
         let row = sender.tag
         let mobile = mobileList[row]
         if !(mobile.isFavorite) {
-            tableView.beginUpdates()
             vm.updateFavorite(mobile.id, isFavorite: true)
             let indexPath = IndexPath(row: row, section: 0)
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-            tableView.endUpdates()
+            tableView.reloadRows(at: [indexPath], with: .none)
+            NotificationCenter.default.post(name: .addFavorite, object: nil)
         }
     }
     

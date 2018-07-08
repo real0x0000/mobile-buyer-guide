@@ -36,7 +36,6 @@ class MobileDetailViewController: UIViewController {
             .filter { $0.count != 0 }
             .subscribe(onNext: { [unowned self] in
                 self.mobileImagesUrl = $0
-                print($0)
                 self.imageCollectionView.reloadData()
             }).disposed(by: disposeBag)
     }

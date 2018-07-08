@@ -22,12 +22,19 @@ class MobileDetailViewModel {
         let path = "https://scb-test-mobile.herokuapp.com/api/mobiles/\(id)/images/"
         ConnectionController.share.makeRequest(path, onCompletion: { (result) in
             if let json = result {
-                let imagesUrl = json.map { (_, js) in js["url"].stringValue }
+                let imagesUrl = json.map { (_, js) in self.addHttp(js["url"].stringValue) }
                 self.rx_mobileImagesUrl.onNext(imagesUrl)
             }
         }, onError: { (error) in
             print(error)
         })
+    }
+    
+    fileprivate func addHttp(_ url: String) -> String {
+        if url.range(of: "http") == nil {
+            return "http://" + url
+        }
+        return url
     }
     
 }

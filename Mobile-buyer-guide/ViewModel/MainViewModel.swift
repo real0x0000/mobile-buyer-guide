@@ -29,19 +29,17 @@ class MainViewModel {
     }
     
     func sortMobileList(_ list: [MobilePhone]) -> [MobilePhone] {
-        var sortList: [MobilePhone] = []
         let sortType = try! rx_sortType.value()
         switch sortType {
         case .lowPrice:
-            sortList = list.sorted(by: { $0.price < $1.price })
+            return list.sorted(by: { $0.price < $1.price })
         case .highPrice:
-            sortList = list.sorted(by: { $0.price > $1.price})
+            return list.sorted(by: { $0.price > $1.price})
         case .rating:
-            sortList = list.sorted(by: { $0.rating > $1.rating})
+            return list.sorted(by: { $0.rating > $1.rating})
         default:
-            sortList = list
+            return list
         }
-        return sortList
     }
     
 }

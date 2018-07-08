@@ -25,13 +25,7 @@ class MobileListViewModel {
                 self.getMobileList()
             }).disposed(by: disposeBag)
     }
-    
-//    func updateList() {
-//        if let list = try? rx_mobileList.value(), list.count != 0 {
-//            self.rx_mobileList.onNext(MainViewModel.share.sortMobileList(list))
-//        }
-//    }
-    
+
     func getMobileList() {
         let list = MainViewModel.share.sortMobileList(MobilePhone.getAll())
         self.rx_mobileList.onNext(list)

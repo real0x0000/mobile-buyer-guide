@@ -26,12 +26,6 @@ class FavoriteListViewModel {
             }).disposed(by: disposeBag)
     }
     
-//    func updateList() {
-//        if let list = try? rx_favoriteList.value(), list.count != 0 {
-//            self.rx_favoriteList.onNext(MainViewModel.share.sortMobileList(list))
-//        }
-//    }
-    
     func getFavoriteList() {
         let list = MainViewModel.share.sortMobileList(MobilePhone.getFavoriteList())
         self.rx_favoriteList.onNext(list)

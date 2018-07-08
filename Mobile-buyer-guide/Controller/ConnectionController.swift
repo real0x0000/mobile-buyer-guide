@@ -46,7 +46,7 @@ class ConnectionController {
                     onCompletion(json)
                 }
                 else {
-                    onError("")
+                    onError(Properties.Message.MESSAGE_ERROR_RESPONSE)
                 }
             case .failure:
                 if response.response != nil {

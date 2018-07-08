@@ -19,14 +19,14 @@ class MobileDetailViewModel {
     }
     
     func getMobileImages(_ id: Int) {
-        let path = "https://scb-test-mobile.herokuapp.com/api/mobiles/\(id)/images/"
+        let path = "\(Properties.Service.SERVICE_URL)/\(id)/images/"
         ConnectionController.share.makeRequest(path, onCompletion: { (result) in
             if let json = result {
                 let imagesUrl = json.map { (_, js) in self.addHttp(js["url"].stringValue) }
                 self.rx_mobileImagesUrl.onNext(imagesUrl)
             }
         }, onError: { (error) in
-            print(error)
+            AlertController.share.show(fromViewController: UIApplication.topViewController()!, title: error)
         })
     }
     

@@ -15,7 +15,7 @@ class MainViewModel {
     let rx_isUpdateList: BehaviorSubject<Bool> = BehaviorSubject(value: false)
     
     func getMobileList() {
-        let path = "https://scb-test-mobile.herokuapp.com/api/mobiles"
+        let path = Properties.Service.SERVICE_URL
         ConnectionController.share.makeRequest(path, onCompletion: { (result) in
             if let json = result {
                 json.forEach { (_, js) in
@@ -24,7 +24,7 @@ class MainViewModel {
                 self.rx_isUpdateList.onNext(true)
             }
         }, onError: { (error) in
-            print(error)
+            AlertController.share.show(fromViewController: UIApplication.topViewController()!, title: error)
         })
     }
     
